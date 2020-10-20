@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos practicos</title>
+</head>
+<style>
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    main{
+        flex-grow: 1;
+    }
+
+    .titulares{
+        padding: 1rem;
+        background-color: #222;
+        color: #eee;
+    }
+    .header{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+    }
+    .menu ul{
+        list-style-type: none;
+    }
+    .hero-img{
+        min-height: 100vh;
+        background-image: url('https://placeimg.com/1280/720/people');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+    .hero-img div{
+        min-height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.75);
+        text-align: center;
+    }
+    .hero-img h1{
+        font-size: 5vw;
+    }
+
+    @media screen and (min-width:1024px){
+        .header{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .menu ul{
+            display: flex;
+        }
+        .menu ul li{
+            padding: .5rem;
+        }
+        .flex-row{
+            display: flex;
+            align-items: center;
+        }
+        .flex-item{
+            flex: 0 0 50%;
+        }
+        .flex-order-1{
+            order: 1;
+        }
+        .flex-row-reverse{
+            flex-flow: row-reverse;
+        }
+    }
+
+    .flex-responsive{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .flex-responsive-item{
+        border: thin solid #c333;
+        flex: 1 1 200px;
+    }
+</style>
+
+<body>
+    <header class="titulares header">
+        <div class="logo">URTAAV</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Section1</a></li>
+                <li><a href="#">Section2</a></li>
+                <li><a href="#">Section3</a></li>
+                <li><a href="#">Section4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="hero-img">
+            <div>
+                <h1>Flexbox is fuckin cool!!!</h1>
+            </div>
+        </article>
+        <section class="flex-row">
+            <article class="flex-item">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe hic vero qui reprehenderit omnis libero eum eius doloremque delectus aut, dolores atque soluta, distinctio et. Perferendis ipsam recusandae doloremque?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placeimg.com/400/400/people" alt="">
+            </article>
+        </section>
+        <section class="flex-row flex-row-reverse">
+            <article class="flex-item">
+              <h2>Título</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius facilis ut aperiam minus ab sunt sed
+                rerum,
+                commodi deleniti repellat impedit modi excepturi. Quia numquam ex provident quo vero?
+              </p>
+            </article>
+            <article class="flex-item">
+              <img src="https://placeimg.com/400/400/arch">
+            </article>
+          </section>
+          <h2>RESPONSIVE SIN MEDIA QUERIES CON FLEXBOX</h2>
+          <section class="flex-responsive">
+              <article class="flex-responsive-item">item Responsive 1</article>
+              <article class="flex-responsive-item">item Responsive 2</article>
+              <article class="flex-responsive-item">item Responsive 3</article>
+              <article class="flex-responsive-item">item Responsive 4</article>
+              <article class="flex-responsive-item">item Responsive 5</article>
+              <article class="flex-responsive-item">item Responsive 6</article>
+              <article class="flex-responsive-item">item Responsive 7</article>
+              <article class="flex-responsive-item">item Responsive 8</article>
+              <article class="flex-responsive-item">item Responsive 9</article>
+              <article class="flex-responsive-item">item Responsive 10</article>
+              <article class="flex-responsive-item">item Responsive 11</article>
+              <article class="flex-responsive-item">item Responsive 12</article>
+              <article class="flex-responsive-item">item Responsive 13</article>
+              <article class="flex-responsive-item">item Responsive 14</article>
+              <article class="flex-responsive-item">item Responsive 15</article>
+              <article class="flex-responsive-item">item Responsive 16</article>
+              <article class="flex-responsive-item">item Responsive 17</article>
+              <article class="flex-responsive-item">item Responsive 18</article>
+              <article class="flex-responsive-item">item Responsive 19</article>
+          </section>
+     </main>
+    <footer class="titulares">
+        <h2>Sticky FOOTER</h2>
+        <section class="flex-responsive">
+            <article class="flex-responsive-item">item Responsive 1</article>
+            <article class="flex-responsive-item">item Responsive 2</article>
+            <article class="flex-responsive-item">item Responsive 3</article>
+            <article class="flex-responsive-item">item Responsive 4</article>
+            <article class="flex-responsive-item">item Responsive 5</article>
+            <article class="flex-responsive-item">item Responsive 6</article>
+            <article class="flex-responsive-item">item Responsive 7</article>
+            <article class="flex-responsive-item">item Responsive 8</article>
+            <article class="flex-responsive-item">item Responsive 9</article>
+            <article class="flex-responsive-item">item Responsive 10</article>
+            <article class="flex-responsive-item">item Responsive 11</article>
+            <article class="flex-responsive-item">item Responsive 12</article>
+            <article class="flex-responsive-item">item Responsive 13</article>
+            <article class="flex-responsive-item">item Responsive 14</article>
+            <article class="flex-responsive-item">item Responsive 15</article>
+            <article class="flex-responsive-item">item Responsive 16</article>
+            <article class="flex-responsive-item">item Responsive 17</article>
+            <article class="flex-responsive-item">item Responsive 18</article>
+            <article class="flex-responsive-item">item Responsive 19</article>
+        </section>
+    </footer>
+
+</body>
+
+</html>
